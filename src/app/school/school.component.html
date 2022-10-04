@@ -1,0 +1,40 @@
+<h1>school Details</h1>
+<div [formGroup]="user">
+    <div>
+      <label for="">Name</label>
+       <input type="text" pInputText formControlName="name">
+       <div *ngIf="school['name'].invalid && (school['name'].dirty||school['name'].touched)">
+          <div class="nameInput" *ngIf="school['name'].errors?.required">
+              name is required
+  
+          </div>
+      </div> </div>
+
+
+      <div>
+        <label for="">email</label>
+         <input type="text" pInputText formControlName="email">
+         <div *ngIf="school['email'].invalid && (school['email'].dirty||school['email'].touched)">
+            <div class="nameInput" *ngIf="school['email'].errors?.required">
+                email is required
+            </div>
+        </div>
+          </div>
+
+
+          <div>
+            <label for="">address</label>
+             <input type="text" pInputText formControlName="address">
+             <div *ngIf="school['address'].invalid && (school['address'].dirty||school['address'].touched)">
+                <div class="nameInput" *ngIf="school['address'].errors?.required">
+                    address is required
+                </div>
+            </div>
+              </div>
+
+
+
+
+              <!-- <p-button label="Click" ></p-button> -->
+              <button p-button (click)="submit()" type="button"label="Click">submit</button>
+</div>

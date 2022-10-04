@@ -1,0 +1,81 @@
+<h1>college student details</h1>
+
+<!-- <p>student works!</p> -->
+<div [formGroup]="user">
+    <div>
+      <label for="">Student Name:</label>
+       <input type="text" pInputText formControlName="name">
+       <div *ngIf="login['name'].invalid && (login['name'].dirty||login['name'].touched)">
+          <div class="nameInput" *ngIf="login['name'].errors?.required">
+              name is required
+  
+          </div>
+      </div>
+        </div>
+  
+        <div>
+            <label for="">Register no:</label>
+             <input type="text" pInputText formControlName="Register">
+             <div *ngIf="login['Register'].invalid && (login['Register'].dirty||login['Register'].touched)">
+                <div class="nameInput" *ngIf="login['name'].errors?.required">
+                    Register no is required
+        
+                </div>
+            </div>
+              </div>
+        
+
+
+
+
+
+
+
+  
+  
+  
+       
+    <div>
+      <label for="">Student email:</label>
+       <input type="text" pInputText formControlName="email">
+       <div *ngIf="login['email'].invalid && (login['email'].dirty||login['email'].touched)">
+          <div class="nameInput" *ngIf="login['email'].errors?.required">
+              email is required
+          </div>
+      </div>
+        </div>
+   
+  
+  
+   
+      
+    <div>
+      <label for="">Student mobile:</label>
+       <input type="text" pInputText formControlName="mobile">
+       <div *ngIf="login['mobile'].invalid && (login['mobile'].dirty||login['mobile'].touched)">
+          <div class="nameInput" *ngIf="login['mobile'].errors?.required">
+              number is required
+          </div>
+      </div>
+       </div>
+
+       <div>
+        <label for="">Student Address</label>
+         <input type="text" pInputText formControlName="address">
+         <div *ngIf="login['address'].invalid && (login['address'].dirty||login['address'].touched)">
+            <div class="nameInput" *ngIf="login['address'].errors?.required">
+                Address is required
+            </div>
+        </div>
+         </div>
+
+
+
+
+  
+       
+  <!-- <p-button label="Click" ></p-button> -->
+  <button p-button (click)="submit()" type="button"label="Click">submit</button>
+  
+  
+      </div>
